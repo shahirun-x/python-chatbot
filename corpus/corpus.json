@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "topic": "Lists",
+    "question_variations": [
+      "How do I create a list in Python?",
+      "What is the syntax for a list?",
+      "Can you show me how to make a list?",
+      "list creation"
+    ],
+    "answer_text": "In Python, a list is an ordered and mutable collection of items. You can create a list by placing comma-separated values inside square brackets [].",
+    "code_example": "# An empty list\nempty_list = []\n\n# A list of integers\nnumbers = [1, 2, 3, 4, 5]\n\n# A list with mixed data types\nmixed_list = [\"hello\", 100, 3.14]",
+    "best_practice_tip": "It's a good practice to name your lists using plural nouns (e.g., 'numbers', 'students', 'items') to make your code more readable."
+  },
+  {
+    "id": 2,
+    "topic": "For Loops",
+    "question_variations": [
+      "How does a for loop work?",
+      "Show me an example of a for loop",
+      "for loop syntax",
+      "How to iterate over a list?"
+    ],
+    "answer_text": "A 'for' loop in Python is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).",
+    "code_example": "fruits = [\"apple\", \"banana\", \"cherry\"]\n\nfor fruit in fruits:\n  print(fruit)",
+    "best_practice_tip": "Use descriptive variable names for the items in your loop (e.g., 'for student in students:' is better than 'for x in my_list:')."
+  },
+  {
+    "id": 3,
+    "topic": "NameError",
+    "question_variations": [
+      "What does NameError mean?",
+      "Why do I get a NameError?",
+      "NameError: name 'x' is not defined",
+      "how to fix nameerror"
+    ],
+    "answer_text": "A 'NameError' occurs when you try to use a variable or function name that has not been defined yet. It's one of the most common errors for beginners.",
+    "code_example": "# This will cause a NameError because 'my_variable' was never created\nprint(my_variable)\n\n# To fix it, you must define the variable before you use it:\nmy_variable = \"Now I exist!\"\nprint(my_variable)",
+    "best_practice_tip": "Always double-check for typos in your variable names and make sure you assign a value to a variable before you try to use it."
+  },
+  {
+    "id": 4,
+    "topic": "Functions",
+    "question_variations": [
+      "How to define a function in Python?",
+      "function syntax python",
+      "How do I create my own function?",
+      "def keyword"
+    ],
+    "answer_text": "You can define your own functions using the 'def' keyword. A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function.",
+    "code_example": "# A simple function that takes a name and prints a greeting\ndef greet(name):\n  print(f\"Hello, {name}!\")\n\n# Calling the function\ngreet(\"Alice\")",
+    "best_practice_tip": "Functions should ideally do one thing well. Use clear, descriptive names for your functions and their parameters. Use docstrings to explain what your function does."
+  },
+  {
+    "id": 5,
+    "topic": "Dictionaries",
+    "question_variations": [
+      "How to make a dictionary in python?",
+      "What is a dictionary?",
+      "python dictionary example",
+      "key-value pair"
+    ],
+    "answer_text": "A dictionary is an unordered collection of data values, used to store data values like a map, which, unlike other Data Types that hold only a single value as an element, Dictionary holds key:value pair. Keys must be unique and immutable.",
+    "code_example": "# Creating a dictionary\nstudent = {\n  \"name\": \"John Doe\",\n  \"age\": 21,\n  \"major\": \"Computer Science\"\n}\n\n# Accessing a value by its key\nprint(student[\"name\"])",
+    "best_practice_tip": "Dictionaries are great for storing structured information. Choose meaningful and consistent keys."
+  }
+]

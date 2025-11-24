@@ -1,0 +1,38 @@
+.message-input-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #3a3a3a;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  resize: none; /* Prevents user from resizing the textarea */
+}
+
+.message-input:focus {
+  outline: none;
+  border-color: var(--accent-red-wine);
+}
+
+.send-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent-red-wine);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #8a3a44;
+}
