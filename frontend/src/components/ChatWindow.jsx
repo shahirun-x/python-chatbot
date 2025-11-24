@@ -8,8 +8,6 @@ const ChatWindow = () => {
     { sender: 'bot', text: 'Hello! How can I help you with Python today?' }
   ]);
   const [input, setInput] = useState('');
-  // We don't need to manage session_id on the frontend for this version,
-  // the backend handles creating it. We will just send what we have.
   const [session_id, setSessionId] = useState(null); 
 
   const messagesEndRef = useRef(null);
@@ -29,7 +27,8 @@ const ChatWindow = () => {
     setInput('');
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/chat', {
+      // FIXED: Added "/api/chat" to the end of the URL
+      const response = await fetch('https://improved-funicular-wrjgrrq755ww256gp-8000.app.github.dev/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: input, session_id: session_id }),
@@ -55,13 +54,9 @@ const ChatWindow = () => {
         
         const chunk = decoder.decode(value, { stream: true });
         
-        // THIS IS THE CORRECT, IMMUTABLE WAY TO UPDATE THE LAST MESSAGE
         setMessages(prev => {
-            // Make a copy of the messages array
             const newMessages = [...prev];
-            // Get the last message
             const lastMessage = newMessages[newMessages.length - 1];
-            // Create a *new* object for the last message with the updated text
             newMessages[newMessages.length - 1] = {
                 ...lastMessage,
                 text: lastMessage.text + chunk,

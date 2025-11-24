@@ -81,6 +81,7 @@ async def chat_endpoint(query: Query, db: Session = Depends(get_db)):
     history.reverse()
     chat_history_text = "\n".join([f"{msg.sender}: {msg.text}" for msg in history])
 
+    # Robust context handling
     context_str = ""
     if retrieved_chunks:
         if isinstance(retrieved_chunks[0], dict):
@@ -110,6 +111,7 @@ You are a friendly Python tutor. Based on the following context, answer the user
                     full_response_text += chunk.text
                     yield chunk.text
                     await asyncio.sleep(0.01)
+            
             bot_message = Message(conversation_id=conversation.id, sender="bot", text=full_response_text)
             db.add(bot_message)
             db.commit()
