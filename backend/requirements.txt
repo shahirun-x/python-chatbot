@@ -1,23 +1,12 @@
-# Core Backend & Server
 fastapi
 uvicorn[standard]
 python-multipart
-
-# Database
 sqlalchemy
-
-# AI & RAG Pipeline
 google-generativeai
 sentence-transformers
 faiss-cpu
-
-# Document & Web Processing
 pypdf
 requests
 beautifulsoup4
-
-# Utility
 python-dotenv
-
-# Development Tools
-black
+numpy

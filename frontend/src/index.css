@@ -1,6 +1,54 @@
+/* frontend/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+  /* --- LIGHT THEME (WARM CLAUDE STYLE) --- */
+  --bg-app: #F5F2EB;          /* Warm Paper Background */
+  --bg-panel: #FFFFFF;        /* Clean Card Background */
+  --text-primary: #333333;    /* Soft Charcoal */
+  --text-secondary: #666666;
+  --accent-color: #DA7756;    /* Warm Terracotta/Burnt Orange */
+  --accent-hover: #C56345;
+  --bubble-user: #F0EEE6;     /* Subtle warm grey for user */
+  --bubble-bot: transparent;
+  --border-color: #E0E0E0;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --font-body: 'Inter', sans-serif;
+  --font-header: 'Merriweather', serif; /* Classy serif headers */
+}
+
+[data-theme='dark'] {
+  /* --- DARK THEME (PRO TECH STYLE) --- */
+  --bg-app: #1A1A1A;
+  --bg-panel: #262626;
+  --text-primary: #EAEAEA;
+  --text-secondary: #A0A0A0;
+  --accent-color: #DA7756;    /* Keep the warm accent */
+  --accent-hover: #E88A6A;
+  --bubble-user: #333333;
+  --bubble-bot: transparent;
+  --border-color: #404040;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.3);
+  border-radius: 20px;
 }
