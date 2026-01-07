@@ -9,4 +9,4 @@ app_port: 7860
 ---
 
 # Python Chatbot Backend
-This is the FastAPI backend for the RAG Chatbot.
+This is the FastAPI backend for the RAG Chatbot, running on Docker.
