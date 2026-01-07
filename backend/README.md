@@ -9,5 +9,4 @@ app_port: 7860
 ---
 
 # Python Chatbot Backend
-
 This is the Dockerized backend for the RAG Chatbot.
