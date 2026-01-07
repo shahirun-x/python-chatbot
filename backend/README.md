@@ -10,9 +10,4 @@ app_port: 7860
 
 # Python Chatbot Backend
 
-This is a Retrieval-Augmented Generation (RAG) chatbot backend built with FastAPI and Google Gemini.
-
-## Features
-- **Smart Index:** Powered by 13,000+ Python coding questions.
-- **Model:** Uses Google Gemini 2.5 Flash for high speed and generous free-tier limits.
-- **Search:** FAISS vector search for context retrieval.
+This is the Dockerized backend for the RAG Chatbot.
